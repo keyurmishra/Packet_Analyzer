@@ -24,10 +24,12 @@ bool SNIExtractor::isTLSClientHello(const uint8_t* payload, size_t length) {
     
     // Check TLS record header
     // Byte 0: Content Type (should be 0x16 = Handshake)
+    
     if (payload[0] != CONTENT_TYPE_HANDSHAKE) return false;
     
     // Bytes 1-2: TLS Version (0x0301 = TLS 1.0, 0x0303 = TLS 1.2)
     // We accept 0x0300 (SSL 3.0) through 0x0304 (TLS 1.3)
+    
     uint16_t version = readUint16BE(payload + 1);
     if (version < 0x0300 || version > 0x0304) return false;
     
