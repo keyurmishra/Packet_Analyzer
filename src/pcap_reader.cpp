@@ -14,6 +14,7 @@ PcapReader::~PcapReader() {
 
 bool PcapReader::open(const std::string& filename) {
     // Close any previously opened file
+    
     close();
     
     // Open in binary mode - this is crucial for reading raw bytes
