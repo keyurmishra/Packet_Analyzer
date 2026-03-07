@@ -6,7 +6,7 @@ This guide will help you build and run the DPI Engine on Windows. Follow these s
 
 ## Option 1: Using Visual Studio (Recommended for Beginners)
 
-### Step 1: Install Visual Studio
+### Step 1: Install Visual Studio-->
 
 1. Download **Visual Studio 2022 Community** (free):
    - Go to: https://visualstudio.microsoft.com/downloads/
@@ -21,7 +21,7 @@ This guide will help you build and run the DPI Engine on Windows. Follow these s
 
 4. Click "Install" and wait (this takes 10-20 minutes)
 
-### Step 2: Open the Project
+### Step 2: Open the Project-->
 
 1. Open Visual Studio 2022
 
@@ -31,7 +31,7 @@ This guide will help you build and run the DPI Engine on Windows. Follow these s
 
 4. Wait for Visual Studio to scan the files (bottom status bar shows progress)
 
-### Step 3: Create a Build Configuration
+### Step 3: Create a Build Configuration-->
 
 1. In Solution Explorer (right side), right-click on the folder name
 
@@ -61,7 +61,7 @@ This guide will help you build and run the DPI Engine on Windows. Follow these s
 
 5. Save the file (Ctrl+S)
 
-### Step 4: Build the Project
+### Step 4: Build the Project-->
 
 **Method A: Using CMake (if CMakeLists.txt works)**
 
@@ -88,7 +88,7 @@ cl /EHsc /std:c++17 /O2 /I include /Fe:dpi_engine.exe ^
 
 3. If successful, you'll see `dpi_engine.exe` in the folder
 
-### Step 5: Run the Program
+### Step 5: Run the Program-->
 
 ```cmd
 dpi_engine.exe test_dpi.pcap output.pcap
