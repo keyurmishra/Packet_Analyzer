@@ -57,6 +57,7 @@ std::string appTypeToString(AppType type) {
 }
 
 // Map SNI/domain to application type
+
 AppType sniToAppType(const std::string& sni) {
     if (sni.empty()) return AppType::UNKNOWN;
     
@@ -191,6 +192,7 @@ AppType sniToAppType(const std::string& sni) {
     
     // If SNI is present but not recognized, still mark as TLS/HTTPS
     return AppType::HTTPS;
+    
 }
 
 } // namespace DPI
