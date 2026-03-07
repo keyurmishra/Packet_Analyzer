@@ -10,11 +10,11 @@ constexpr uint32_t PCAP_MAGIC_SWAPPED = 0xd4c3b2a1; // Swapped byte order
 
 PcapReader::~PcapReader() {
     close();
+    
 }
 
 bool PcapReader::open(const std::string& filename) {
     // Close any previously opened file
-    
     close();
     
     // Open in binary mode - this is crucial for reading raw bytes
@@ -31,6 +31,7 @@ bool PcapReader::open(const std::string& filename) {
         close();
         return false;
     }
+    
     
     // Check the magic number to determine byte order
     if (global_header_.magic_number == PCAP_MAGIC_NATIVE) {
@@ -58,6 +59,7 @@ bool PcapReader::open(const std::string& filename) {
     
     return true;
 }
+
 
 void PcapReader::close() {
     if (file_.is_open()) {
