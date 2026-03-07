@@ -21,7 +21,7 @@ This document explains **everything** about this project - from basic networking
 
 ---
 
-## 1. What is DPI?
+## 1. What is DPI--> ?
 
 **Deep Packet Inspection (DPI)** is a technology used to examine the contents of network packets as they pass through a checkpoint. Unlike simple firewalls that only look at packet headers (source/destination IP), DPI looks *inside* the packet payload.
 
@@ -42,7 +42,7 @@ User Traffic (PCAP) → [DPI Engine] → Filtered Traffic (PCAP)
 
 ---
 
-## 2. Networking Background
+## 2. Networking Background-->
 
 ### The Network Stack (Layers)
 
@@ -119,7 +119,7 @@ TLS Client Hello:
 
 ---
 
-## 3. Project Overview
+## 3. Project Overview-->
 
 ### What This Project Does
 
@@ -143,7 +143,7 @@ TLS Client Hello:
 
 ---
 
-## 4. File Structure
+## 4. File Structure-->
 
 ```
 packet_analyzer/
@@ -175,7 +175,7 @@ packet_analyzer/
 
 ---
 
-## 5. The Journey of a Packet (Simple Version)
+## 5. The Journey of a Packet (Simple Version)-->
 
 Let's trace a single packet through `main_working.cpp`:
 
