@@ -73,7 +73,7 @@ std::vector<std::string> RuleManager::getBlockedIPs() const {
 }
 
 // ============================================================================
-// Application Blocking
+// Application Blocking 
 // ============================================================================
 
 void RuleManager::blockApp(AppType app) {
