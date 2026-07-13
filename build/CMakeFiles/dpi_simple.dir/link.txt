@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/dpi_simple.dir/link.d CMakeFiles/dpi_simple.dir/src/main_working.cpp.o CMakeFiles/dpi_simple.dir/src/pcap_reader.cpp.o CMakeFiles/dpi_simple.dir/src/packet_parser.cpp.o CMakeFiles/dpi_simple.dir/src/sni_extractor.cpp.o CMakeFiles/dpi_simple.dir/src/types.cpp.o -o dpi_simple
