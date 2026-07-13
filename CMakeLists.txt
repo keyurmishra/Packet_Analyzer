@@ -5,21 +5,37 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# Source files
+# Header files location
 
-set(SOURCES
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
+find_package(Threads REQUIRED)
+
+# Packet parser viewer executable
+add_executable(packet_analyzer
     src/main.cpp
     src/pcap_reader.cpp
     src/packet_parser.cpp
 )
 
-# Header files location
+# Simple DPI executable
+add_executable(dpi_simple
+    src/main_working.cpp
+    src/pcap_reader.cpp
+    src/packet_parser.cpp
+    src/sni_extractor.cpp
+    src/types.cpp
+)
 
-include_directories(${CMAKE_SOURCE_DIR}/include)
-
-# Create the executable
-
-add_executable(packet_analyzer ${SOURCES})
+# Multi-threaded DPI executable
+add_executable(dpi_engine
+    src/dpi_mt.cpp
+    src/pcap_reader.cpp
+    src/packet_parser.cpp
+    src/sni_extractor.cpp
+    src/types.cpp
+)
+target_link_libraries(dpi_engine PRIVATE Threads::Threads)
 
 # For macOS, we might need to link against system libraries later
 
